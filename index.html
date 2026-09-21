@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello, WorkBuddy</title>
+<style>
+  :root{
+    --brand:#2563eb;
+    --bg:#f8fafc;
+    --text:#1f2937;
+    --sub:#6b7280;
+    --card:#ffffff;
+    --border:#e5e7eb;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#eef2ff 0%,#f8fafc 60%);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    color:var(--text);
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:48px 44px;
+    max-width:480px;
+    width:90%;
+    text-align:center;
+    box-shadow:0 20px 50px -20px rgba(37,99,235,0.25);
+  }
+  .badge{
+    display:inline-block;
+    background:#eef2ff;
+    color:#4338ca;
+    font-size:13px;
+    padding:4px 14px;
+    border-radius:999px;
+    margin-bottom:18px;
+  }
+  h1{
+    font-size:28px;
+    margin:0 0 12px;
+    line-height:1.4;
+  }
+  h1 span{
+    color:var(--brand);
+  }
+  p.desc{
+    color:var(--sub);
+    font-size:15px;
+    line-height:1.7;
+    margin:0 0 28px;
+  }
+  .meta{
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    padding-top:20px;
+    border-top:1px solid var(--border);
+    font-size:13px;
+    color:var(--sub);
+  }
+  .meta b{
+    color:var(--text);
+    display:block;
+    font-size:15px;
+    margin-bottom:2px;
+  }
+  .dot{
+    display:inline-block;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#22c55e;
+    margin-right:6px;
+    box-shadow:0 0 0 4px rgba(34,197,94,0.15);
+  }
+  footer{
+    margin-top:24px;
+    font-size:12px;
+    color:#9ca3af;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <span class="badge">部署演示页面</span>
+    <h1>你好，这是通过 <span>WorkBuddy</span><br>部署到 GitHub Pages 的页面</h1>
+    <p class="desc">这是一个最小可用的静态网页示例，用来验证「说一句话即可完成部署」的流程。<br>页面已经上线，任何人拿到链接都能直接打开访问。</p>
+    <div class="meta">
+      <div><b><span class="dot"></span>已上线</b>公网可访问</div>
+      <div><b>0 服务器</b>纯静态托管</div>
+      <div><b>免费</b>GitHub Pages</div>
+    </div>
+    <footer id="time"></footer>
+  </div>
+  <script>
+    document.getElementById('time').textContent = '页面生成时间：' + new Date().toLocaleString('zh-CN');
+  </script>
+</body>
+</html>
