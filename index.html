@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hello, WorkBuddy</title>
+<title>WorkBuddy 一句话部署验证</title>
 <style>
   :root{
     --brand:#2563eb;
-    --bg:#f8fafc;
     --text:#1f2937;
     --sub:#6b7280;
     --card:#ffffff;
     --border:#e5e7eb;
+    --ok:#059669;
   }
   *{box-sizing:border-box;}
   body{
@@ -29,79 +29,77 @@
     border:1px solid var(--border);
     border-radius:20px;
     padding:48px 44px;
-    max-width:480px;
+    max-width:520px;
     width:90%;
     text-align:center;
     box-shadow:0 20px 50px -20px rgba(37,99,235,0.25);
   }
   .badge{
     display:inline-block;
-    background:#eef2ff;
-    color:#4338ca;
+    background:#ecfdf5;
+    color:var(--ok);
     font-size:13px;
     padding:4px 14px;
     border-radius:999px;
     margin-bottom:18px;
   }
   h1{
-    font-size:28px;
+    font-size:26px;
     margin:0 0 12px;
-    line-height:1.4;
+    line-height:1.5;
   }
-  h1 span{
-    color:var(--brand);
-  }
+  h1 span{ color:var(--brand); }
   p.desc{
     color:var(--sub);
     font-size:15px;
-    line-height:1.7;
-    margin:0 0 28px;
+    line-height:1.8;
+    margin:0 0 24px;
   }
+  .steps{
+    text-align:left;
+    background:#f8fafc;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:18px 20px;
+    font-size:14px;
+    color:var(--text);
+    margin-bottom:24px;
+  }
+  .steps li{ margin-bottom:8px; }
+  .steps li:last-child{ margin-bottom:0; }
   .meta{
     display:flex;
     justify-content:center;
-    gap:24px;
-    padding-top:20px;
+    gap:20px;
+    padding-top:18px;
     border-top:1px solid var(--border);
     font-size:13px;
     color:var(--sub);
   }
-  .meta b{
-    color:var(--text);
-    display:block;
-    font-size:15px;
-    margin-bottom:2px;
-  }
-  .dot{
-    display:inline-block;
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:#22c55e;
-    margin-right:6px;
-    box-shadow:0 0 0 4px rgba(34,197,94,0.15);
-  }
-  footer{
-    margin-top:24px;
-    font-size:12px;
-    color:#9ca3af;
-  }
+  .meta b{ color:var(--text); display:block; font-size:14px; margin-bottom:2px; }
+  footer{ margin-top:20px; font-size:12px; color:#9ca3af; }
 </style>
 </head>
 <body>
   <div class="card">
-    <span class="badge">部署演示页面</span>
-    <h1>你好，这是通过 <span>WorkBuddy</span><br>部署到 GitHub Pages 的页面</h1>
-    <p class="desc">这是一个最小可用的静态网页示例，用来验证「说一句话即可完成部署」的流程。<br>页面已经上线，任何人拿到链接都能直接打开访问。</p>
+    <span class="badge">✅ 部署验证成功</span>
+    <h1>这次是<span>「一句话」</span>直接完成的部署</h1>
+    <p class="desc">全程没有手动打开 GitHub 网页操作，WorkBuddy 直接完成了内容更新、提交和发布，你刷新这个链接就能看到最新版本。</p>
+    <ul class="steps">
+      <li>1. 说出部署需求</li>
+      <li>2. WorkBuddy 生成/更新页面内容</li>
+      <li>3. WorkBuddy 直接调用连接器把改动推送到 GitHub 仓库</li>
+      <li>4. GitHub Pages 自动重新构建，链接不变，内容已更新</li>
+    </ul>
     <div class="meta">
-      <div><b><span class="dot"></span>已上线</b>公网可访问</div>
-      <div><b>0 服务器</b>纯静态托管</div>
-      <div><b>免费</b>GitHub Pages</div>
+      <div><b>全自动</b>无需手动 Git 操作</div>
+      <div><b>链接不变</b>github.io/long</div>
+      <div><b>公网可见</b>任何人可访问</div>
     </div>
     <footer id="time"></footer>
   </div>
   <script>
-    document.getElementById('time').textContent = '页面生成时间：' + new Date().toLocaleString('zh-CN');
+    document.getElementById('time').textContent = '本次更新时间：' + new Date().toLocaleString('zh-CN');
   </script>
 </body>
 </html>
